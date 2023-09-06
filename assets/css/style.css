@@ -1,3 +1,23 @@
+.btn-cv {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  padding: 8px 24px;
+  cursor: pointer;
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #DAA03DFF;
+  margin-bottom: 10px;
+}
+
+.btn-cv:hover {
+  background-color: #DAA03DFF;
+}
+
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
