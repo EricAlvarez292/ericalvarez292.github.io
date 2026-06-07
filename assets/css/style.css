@@ -531,33 +531,58 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Interests
+# Interests / Skills
 --------------------------------------------------------------*/
-.interests .icon-box {
-  display: flex;
-  align-items: center;
+.interests .skill-category-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(218, 160, 61, 0.2);
+  border-radius: 8px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  height: 100%;
   transition: ease-in-out 0.3s;
 }
 
-.interests .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
+.interests .skill-category-card:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(218, 160, 61, 0.5);
 }
 
-.interests .icon-box h3 {
+.interests .skill-category-card .category-title {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
   font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #DAA03DFF;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(218, 160, 61, 0.25);
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
-.interests .icon-box:hover {
-  background: rgba(255, 255, 255, 0.12);
+.interests .skill-category-card .category-title i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.interests .skill-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ccc;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 3px 2px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.2s;
+}
+
+.interests .skill-tag:hover {
+  background: rgba(218, 160, 61, 0.18);
+  border-color: rgba(218, 160, 61, 0.6);
+  color: #DAA03DFF;
 }
 
 /*--------------------------------------------------------------
