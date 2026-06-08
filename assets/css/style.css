@@ -207,7 +207,6 @@ h6 {
 #header .header-status {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
   font-family: "Poppins", sans-serif;
@@ -225,6 +224,7 @@ h6 {
   display: inline-block;
   animation: pulse-dot 2.2s ease-in-out infinite;
   flex-shrink: 0;
+  margin-right: 8px;
 }
 
 @keyframes pulse-dot {
@@ -238,18 +238,17 @@ h6 {
   margin-top: 10px;
   display: flex;
   align-items: center;
-  gap: 5px;
   font-family: "Poppins", sans-serif;
 }
 
 #header .header-location i {
   font-size: 15px;
   color: #DAA03DFF;
+  margin-right: 5px;
 }
 
 #header .header-cta {
   display: flex;
-  gap: 12px;
   margin-top: 30px;
   flex-wrap: wrap;
 }
@@ -271,6 +270,7 @@ h6 {
 
 #header .btn-cta-primary i {
   margin-right: 7px;
+  font-size: 15px;
 }
 
 #header .btn-cta-primary:hover {
@@ -1608,13 +1608,11 @@ section .container {
 .contact .contact-card {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-top: 3px solid rgba(218, 160, 61, 0.4);
   border-radius: 6px;
   padding: 22px 20px;
-  height: 100%;
   transition: ease-in-out 0.3s;
 }
 
@@ -1629,11 +1627,13 @@ section .container {
   justify-content: center;
   width: 44px;
   height: 44px;
+  min-width: 44px;
   background: rgba(218, 160, 61, 0.1);
   border-radius: 50%;
   flex-shrink: 0;
   font-size: 20px;
   color: #DAA03DFF;
+  margin-right: 16px;
 }
 
 .contact .contact-card h4 {
@@ -1680,14 +1680,12 @@ section .container {
 .contact .contact-social-links {
   display: flex;
   justify-content: center;
-  gap: 14px;
   flex-wrap: wrap;
 }
 
 .contact .contact-social-links a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.65);
   font-size: 13px;
@@ -1696,6 +1694,12 @@ section .container {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   transition: ease-in-out 0.3s;
+  margin: 6px;
+}
+
+.contact .contact-social-links a i {
+  margin-right: 8px;
+  font-size: 16px;
 }
 
 .contact .contact-social-links a:hover {
@@ -1703,9 +1707,6 @@ section .container {
   color: #DAA03DFF;
 }
 
-.contact .contact-social-links a i {
-  font-size: 16px;
-}
 
 /*--------------------------------------------------------------
 # Credits
