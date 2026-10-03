@@ -969,6 +969,18 @@ section .container {
   color: rgba(218, 160, 61, 0.65);
 }
 
+.resume .resume-company a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(218, 160, 61, 0.45);
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
+
+.resume .resume-company a:hover {
+  color: #DAA03DFF;
+}
+
 .resume .resume-date-badge {
   font-size: 11px;
   background: rgba(255, 255, 255, 0.07);
