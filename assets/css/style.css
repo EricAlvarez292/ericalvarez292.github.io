@@ -1464,6 +1464,12 @@ section .container {
   }
 }
 
+.portfolio-details .portfolio-details-slider video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .portfolio-details .swiper-pagination {
   margin-top: 20px;
   position: relative;

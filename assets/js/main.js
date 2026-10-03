@@ -206,7 +206,25 @@
 
   /**
    * Portfolio details slider
+   * Video slides pause autoplay and advance when the video ends; image slides use the autoplay delay
    */
+  const syncSliderVideos = (swiper) => {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    swiper.el.querySelectorAll('video').forEach((video) => {
+      if (activeSlide && activeSlide.contains(video)) return;
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    const activeVideo = activeSlide && activeSlide.querySelector('video');
+    if (activeVideo) {
+      swiper.autoplay.stop();
+      if (activeVideo.paused) activeVideo.play().catch(() => {});
+    } else if (!swiper.autoplay.running) {
+      swiper.autoplay.start();
+    }
+  }
+
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
@@ -218,6 +236,23 @@
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
+    },
+    on: {
+      init: function () {
+        const swiper = this;
+        swiper.el.querySelectorAll('video').forEach((video) => {
+          video.addEventListener('ended', () => {
+            if (swiper.slides[swiper.activeIndex].contains(video)) swiper.slideNext();
+          });
+        });
+        syncSliderVideos(swiper);
+      },
+      slideChange: function () {
+        syncSliderVideos(this);
+      },
+      slideChangeTransitionEnd: function () {
+        syncSliderVideos(this);
+      }
     }
   });
 
